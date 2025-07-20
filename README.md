@@ -5,36 +5,38 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jupyter/notebook/main?urlpath=tree)
 [![Gitpod](https://img.shields.io/badge/gitpod_editor-open-blue.svg)](https://gitpod.io/#https://github.com/jupyter/notebook)
 
-The Jupyter notebook is a web-based notebook environment for interactive computing, now enhanced with **Planckton AI Assistant** - an intelligent code editor and chatbot side panel that provides real-time AI assistance for your coding and data science workflows.
+The Jupyter notebook is a web-based notebook environment for interactive computing, now enhanced with **Planckton AI Assistant** - an intelligent quantum development assistant and chatbot side panel that provides real-time AI assistance for quantum computing, quantum algorithms, and quantum software development workflows.
 
 ![Jupyter notebook example](docs/resources/running_code_med.png 'Jupyter notebook example')
 
 ## 🤖 Planckton AI Assistant
 
-Planckton is an AI-powered coding assistant integrated directly into Jupyter Notebook. It provides:
+Planckton is an AI-powered quantum development assistant integrated directly into Jupyter Notebook. It provides specialized assistance for quantum computing and quantum software development:
 
-- **Real-time AI Chat**: Ask questions about your code, get explanations, and receive coding suggestions
-- **Code Generation**: Generate code snippets and complete functions based on your requirements
-- **Code Explanation**: Get detailed explanations of complex code blocks
-- **Debugging Help**: Receive assistance with error messages and debugging
-- **Best Practices**: Get recommendations for code optimization and best practices
-- **Context-Aware Responses**: AI responses that understand your current notebook context
+- **Quantum Algorithm Guidance**: Get help with quantum algorithms, circuit design, and quantum gates
+- **Quantum Code Generation**: Generate quantum circuits, quantum programs, and quantum algorithms
+- **Quantum Framework Support**: Assistance with Qiskit, Cirq, PennyLane, and other quantum frameworks
+- **Quantum Error Correction**: Help with quantum error correction codes and techniques
+- **Quantum Simulation**: Guidance on quantum simulation and quantum state preparation
+- **Quantum Computing Concepts**: Explanations of quantum mechanics, superposition, entanglement, and more
+- **Context-Aware Quantum Responses**: AI responses that understand your quantum computing context
 
 ### Features
 
 - **Side Panel Interface**: Access Planckton through a dedicated side panel that doesn't interfere with your notebook workflow
-- **Code Block Support**: AI responses can include formatted code blocks with syntax highlighting
-- **Copy-to-Clipboard**: Easy copying of generated code snippets
-- **Conversation History**: Maintain context across multiple interactions
-- **Real-time Responses**: Powered by OpenAI's GPT models for intelligent assistance
+- **Quantum Code Block Support**: AI responses can include formatted quantum code blocks with syntax highlighting for quantum frameworks
+- **Copy-to-Clipboard**: Easy copying of generated quantum circuits and algorithms
+- **Conversation History**: Maintain context across multiple quantum development interactions
+- **Real-time Quantum Assistance**: Powered by OpenAI's GPT models for intelligent quantum computing guidance
+- **Quantum Framework Integration**: Specialized support for popular quantum computing libraries and tools
 
 ### How to Use Planckton
 
 1. **Launch the Assistant**: Click the Planckton button (🤖) in the notebook toolbar
-2. **Ask Questions**: Type your questions about code, debugging, or data science concepts
-3. **Get AI Responses**: Receive intelligent responses with code examples and explanations
-4. **Copy Code**: Click the copy button on any code block to copy it to your clipboard
-5. **Continue Conversations**: Build on previous responses for more detailed assistance
+2. **Ask Quantum Questions**: Type your questions about quantum algorithms, quantum circuits, quantum mechanics, or quantum software development
+3. **Get Quantum AI Responses**: Receive intelligent responses with quantum code examples and explanations
+4. **Copy Quantum Code**: Click the copy button on any quantum code block to copy it to your clipboard
+5. **Continue Quantum Conversations**: Build on previous responses for more detailed quantum computing assistance
 
 ## Maintained versions
 
@@ -96,7 +98,7 @@ pip install notebook
 
 ### Setting up Planckton AI Assistant
 
-To use the Planckton AI Assistant, you'll need to set up an OpenAI API key:
+To use the Planckton Quantum AI Assistant, you'll need to set up an OpenAI API key:
 
 1. **Get an OpenAI API Key**: Sign up at [OpenAI](https://platform.openai.com/) and create an API key
 2. **Set Environment Variable**: Set your OpenAI API key as an environment variable:
@@ -105,13 +107,19 @@ To use the Planckton AI Assistant, you'll need to set up an OpenAI API key:
 export OPENAI_API_KEY="your-openai-api-key-here"
 ```
 
-3. **Launch Jupyter Notebook**: Start the notebook server:
+3. **Install Quantum Dependencies** (Optional): For the best experience, install popular quantum computing frameworks:
+
+```bash
+pip install qiskit cirq pennylane qutip
+```
+
+4. **Launch Jupyter Notebook**: Start the notebook server:
 
 ```bash
 jupyter notebook
 ```
 
-4. **Access Planckton**: Click the Planckton button (🤖) in the notebook toolbar to open the AI assistant
+5. **Access Planckton**: Click the Planckton button (🤖) in the notebook toolbar to open the quantum AI assistant
 
 ## Usage - Running Jupyter notebook
 
@@ -152,12 +160,12 @@ If you are interested in contributing to the project, see [`CONTRIBUTING.md`](CO
 
 ### Contributing to Planckton
 
-The Planckton AI Assistant is built as a JupyterLab extension. Key files:
+The Planckton Quantum AI Assistant is built as a JupyterLab extension. Key files:
 
-- **Frontend**: `packages/notebook-extension/src/planckton.tsx` - React component for the chat interface
-- **Backend**: `notebook/app.py` - Python handler for AI API integration
+- **Frontend**: `packages/notebook-extension/src/planckton.tsx` - React component for the quantum chat interface
+- **Backend**: `notebook/app.py` - Python handler for quantum AI API integration
 - **Styling**: CSS styles embedded in the built JavaScript files
-- **Icon**: `packages/notebook-extension/style/icons/planckton.svg` - Custom Planckton icon
+- **Icon**: `packages/notebook-extension/style/icons/planckton.svg` - Custom Planckton quantum icon
 
 ## Community Guidelines and Code of Conduct
 
