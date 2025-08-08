@@ -16,10 +16,11 @@ Planckton is an AI-powered quantum development assistant integrated directly int
 - **Quantum Algorithm Guidance**: Get help with quantum algorithms, circuit design, and quantum gates
 - **Quantum Code Generation**: Generate quantum circuits, quantum programs, and quantum algorithms
 - **Quantum Framework Support**: Assistance with Qiskit, Cirq, PennyLane, and other quantum frameworks
+- **Quantum Hardware Compatability**: Compatible with superconducting, photonic, and ion trap quantum systems
 - **Quantum Error Correction**: Help with quantum error correction codes and techniques
 - **Quantum Simulation**: Guidance on quantum simulation and quantum state preparation
 - **Quantum Computing Concepts**: Explanations of quantum mechanics, superposition, entanglement, and more
-- **Context-Aware Quantum Responses**: AI responses that understand your quantum computing context
+- **Context-Aware Quantum Responses**: AI responses that understand your context
 
 ### Features
 
