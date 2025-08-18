@@ -31,6 +31,8 @@ Planckton is an AI-powered quantum development assistant integrated directly int
 - **Real-time Quantum Assistance**: Powered by OpenAI's GPT models for intelligent quantum computing guidance
 - **Quantum Framework Integration**: Specialized support for popular quantum computing libraries and tools
 
+<img width="1464" height="766" alt="Screenshot 2025-08-17 at 11 16 18 PM" src="https://github.com/user-attachments/assets/b4908af7-91e3-43dc-8b52-946d7e5c7986" />
+
 ### How to Use Planckton
 
 1. **Launch the Assistant**: Click the Planckton button (🤖) in the notebook toolbar
