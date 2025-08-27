@@ -9,7 +9,7 @@ The Jupyter notebook is a web-based notebook environment for interactive computi
 
 ![Jupyter notebook example](docs/resources/running_code_med.png 'Jupyter notebook example')
 
-## 🤖 Planckton AI Assistant
+## Planckton AI Assistant
 
 Planckton is an AI-powered quantum development assistant integrated directly into Jupyter Notebook. It provides specialized assistance for quantum computing and quantum software development:
 
@@ -30,8 +30,8 @@ Planckton is an AI-powered quantum development assistant integrated directly int
 - **Conversation History**: Maintain context across multiple quantum development interactions
 - **Real-time Quantum Assistance**: Powered by OpenAI's GPT models for intelligent quantum computing guidance
 - **Quantum Framework Integration**: Specialized support for popular quantum computing libraries and tools
-
-<img width="1464" height="766" alt="Screenshot 2025-08-17 at 11 16 18 PM" src="https://github.com/user-attachments/assets/b4908af7-91e3-43dc-8b52-946d7e5c7986" />
+  
+<img width="1464" height="765" alt="Screenshot 2025-08-26 at 4 12 08 PM" src="https://github.com/user-attachments/assets/0b52c375-8606-4643-8fa7-e1083cd49188" />
 
 ### How to Use Planckton
 
