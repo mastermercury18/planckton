@@ -32,6 +32,7 @@ Planckton is an AI-powered quantum development assistant integrated directly int
 - **Quantum Framework Integration**: Specialized support for popular quantum computing libraries and tools
   
 <img width="1461" height="762" alt="Screenshot 2025-09-09 at 9 22 47 PM" src="https://github.com/user-attachments/assets/18e9b559-1b78-4bc2-8826-b845f6be4fd5" />
+<img width="773" height="456" alt="Screenshot 2025-09-09 at 10 00 11 PM" src="https://github.com/user-attachments/assets/c55b56ec-25e4-49d2-bcee-ca7c247f9312" />
 
 ### How to Use Planckton
 
