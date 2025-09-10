@@ -31,14 +31,15 @@ Planckton is an AI-powered quantum development assistant integrated directly int
 - **Real-time Quantum Assistance**: Powered by OpenAI's GPT models for intelligent quantum computing guidance
 - **Quantum Framework Integration**: Specialized support for popular quantum computing libraries and tools
   
-<img width="1464" height="765" alt="Screenshot 2025-08-26 at 4 12 08 PM" src="https://github.com/user-attachments/assets/0b52c375-8606-4643-8fa7-e1083cd49188" />
+<img width="1461" height="762" alt="Screenshot 2025-09-09 at 9 22 47 PM" src="https://github.com/user-attachments/assets/18e9b559-1b78-4bc2-8826-b845f6be4fd5" />
 
 ### How to Use Planckton
 
 1. **Launch the Assistant**: Click the Planckton button (🤖) in the notebook toolbar
 2. **Ask Quantum Questions**: Type your questions about quantum algorithms, quantum circuits, quantum mechanics, or quantum software development
 3. **Get Quantum AI Responses**: Receive intelligent responses with quantum code examples and explanations
-4. **Copy Quantum Code**: Click the copy button on any quantum code block to copy it to your clipboard
+4. **Copy Quantum Code**: Click the![Uploading Screenshot 2025-09-09 at 9.22.47 PM.png…]()
+ copy button on any quantum code block to copy it to your clipboard
 5. **Continue Quantum Conversations**: Build on previous responses for more detailed quantum computing assistance
 
 ## Maintained versions
