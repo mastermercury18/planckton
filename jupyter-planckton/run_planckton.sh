@@ -28,11 +28,18 @@ echo "🔹 Activating virtual environment..."
 source .venv/bin/activate
 
 # --------------------------------------------
+# Build JupyterLab frontend (extension UI)
+# --------------------------------------------
+echo ""
+echo "🔹 Building JupyterLab frontend (jlpm build)..."
+jlpm build
+
+# --------------------------------------------
 # Run Qiskit RAG setup
 # --------------------------------------------
 echo ""
 echo "🔹 Running Qiskit RAG setup..."
-python3 setup_qiskit_rag_linklist.py
+python setup_qiskit_rag_linklist.py
 
 # --------------------------------------------
 # Start Jupyter Notebook server
@@ -42,7 +49,7 @@ echo "🔹 Starting Jupyter Notebook server..."
 echo "🌐 Open: http://localhost:$PORT"
 echo ""
 
-jupyter-notebook \
+jupyter notebook \
   --no-browser \
   --port=$PORT \
   --NotebookApp.token='' \
