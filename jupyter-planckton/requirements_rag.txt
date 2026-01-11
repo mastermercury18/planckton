@@ -1,0 +1,15 @@
+# RAG System Dependencies
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+scikit-learn>=1.1.0
+numpy>=1.21.0
+openai>=1.0.0
+lxml>=4.9.0
+
+# Optional: For better text processing
+nltk>=3.8
+spacy>=3.5.0
+
+# Development dependencies
+pytest>=7.0.0
+black>=22.0.0

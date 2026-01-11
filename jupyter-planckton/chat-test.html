@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Planckton Chat Test</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fbff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .jp-PlancktonPanel-messages {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .jp-PlancktonPanel-msg {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .jp-PlancktonPanel-msg-user {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+
+    .jp-PlancktonPanel-msg-planckton {
+      align-self: flex-start;
+      align-items: flex-start;
+    }
+
+    .jp-PlancktonPanel-msg-header {
+      margin-bottom: 4px;
+    }
+
+    .jp-PlancktonPanel-msg-sender {
+      font-size: 12px;
+      font-weight: 500;
+      color: #6e6e80;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* User message bubble - Rectangular with rounded edges */
+    .jp-PlancktonPanel-msg-user .jp-PlancktonPanel-msg-content {
+      background: #10a37f;
+      color: white;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 16px;
+      line-height: 1.6;
+      width: fit-content;
+      max-width: 85%;
+      align-self: flex-end;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.10);
+      box-sizing: border-box;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* AI message - Rectangular with rounded edges */
+    .jp-PlancktonPanel-msg-planckton .jp-PlancktonPanel-msg-content {
+      background: #f7f7f8;
+      color: #343541;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 16px;
+      line-height: 1.6;
+      width: 100%;
+      max-width: 85%;
+      align-self: flex-start;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.10);
+      box-sizing: border-box;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+  <div class="jp-PlancktonPanel-messages">
+    <div class="jp-PlancktonPanel-msg jp-PlancktonPanel-msg-planckton">
+      <div class="jp-PlancktonPanel-msg-header">
+        <span class="jp-PlancktonPanel-msg-sender">Planckton</span>
+      </div>
+      <div class="jp-PlancktonPanel-msg-content">
+        Hello! I'm Planckton, your AI assistant. How can I help you today?
+      </div>
+    </div>
+
+    <div class="jp-PlancktonPanel-msg jp-PlancktonPanel-msg-user">
+      <div class="jp-PlancktonPanel-msg-header">
+        <span class="jp-PlancktonPanel-msg-sender">You</span>
+      </div>
+      <div class="jp-PlancktonPanel-msg-content">
+        I'd like to see how the chat bubbles look with rectangular shapes and rounded edges.
+      </div>
+    </div>
+
+    <div class="jp-PlancktonPanel-msg jp-PlancktonPanel-msg-planckton">
+      <div class="jp-PlancktonPanel-msg-header">
+        <span class="jp-PlancktonPanel-msg-sender">Planckton</span>
+      </div>
+      <div class="jp-PlancktonPanel-msg-content">
+        Sure! The user messages now have a rectangular shape with rounded edges (border-radius: 12px) instead of the previous ChatGPT-style irregular rounded corners. The AI messages also have the same consistent styling.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
