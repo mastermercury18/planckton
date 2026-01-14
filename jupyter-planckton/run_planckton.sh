@@ -28,6 +28,17 @@ echo "🔹 Activating virtual environment..."
 source .venv/bin/activate
 
 # --------------------------------------------
+# NEW: install dependencies (one-go)
+# --------------------------------------------
+echo ""
+echo "🔹 Installing Python dependencies..."
+pip install -r requirements.txt
+
+echo ""
+echo "🔹 Installing JS dependencies..."
+jlpm install
+
+# --------------------------------------------
 # Build JupyterLab frontend (extension UI)
 # --------------------------------------------
 echo ""
