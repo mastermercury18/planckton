@@ -1,111 +1,79 @@
 {
-  "name": "@jupyter-notebook/lab-extension",
-  "version": "7.5.0-alpha.0",
-  "description": "Jupyter Notebook - Lab Extension",
+  "name": "@jupyter-notebook/root",
+  "version": "0.1.0",
+  "private": true,
   "homepage": "https://github.com/jupyter/notebook",
   "bugs": {
     "url": "https://github.com/jupyter/notebook/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jupyter/notebook.git"
+    "url": "https://github.com/jupyter/notebook"
   },
   "license": "BSD-3-Clause",
   "author": "Project Jupyter",
-  "sideEffects": [
-    "style/**/*.css",
-    "style/index.js"
-  ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "style": "style/index.css",
-  "directories": {
-    "lib": "lib/"
+  "workspaces": {
+    "packages": [
+      "app",
+      "buildutils",
+      "packages/*"
+    ]
   },
-  "files": [
-    "lib/*.d.ts",
-    "lib/*.js.map",
-    "lib/*.js",
-    "schema/*.json",
-    "style/base.css",
-    "style/index.css",
-    "style/index.js"
-  ],
   "scripts": {
-    "build": "jlpm run build:labextension:dev",
-    "build:labextension": "jupyter-labextension build .",
-    "build:labextension:dev": "jupyter-labextension build --development True .",
-    "build:lib": "tsc -b",
-    "build:prod": "jlpm run build:labextension",
-    "clean": "jlpm run clean:lib && jlpm run clean:labextension",
-    "clean:labextension": "rimraf ../../notebook/labextension",
-    "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
-    "watch": "run-p watch:src watch:labextension",
-    "watch:labextension": "jupyter-labextension watch .",
-    "watch:src": "tsc -w"
+    "build": "lerna run build",
+    "build:lib": "lerna run build:lib",
+    "build:prod": "lerna run build:prod --skip-nx-cache",
+    "build:test": "lerna run build:test",
+    "build:utils": "cd buildutils && npm run build",
+    "clean": "lerna run clean",
+    "deduplicate": "jlpm dlx yarn-berry-deduplicate -s fewerHighest && jlpm install",
+    "develop": "jupyter labextension develop . --overwrite && node ./buildutils/lib/develop.js --overwrite",
+    "eslint": "eslint . --ext .ts,.tsx --fix",
+    "eslint:check": "eslint . --ext .ts,.tsx",
+    "eslint:files": "eslint --fix",
+    "get:lab:version": "node ./buildutils/lib/get-latest-lab-version.js",
+    "integrity": "node buildutils/lib/ensure-repo.js",
+    "prettier": "prettier --write \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}\"",
+    "prettier:check": "prettier --list-different \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}\"",
+    "prettier:files": "prettier --write",
+    "release:bump": "node ./buildutils/lib/release-bump.js",
+    "release:patch": "node ./buildutils/lib/release-patch.js",
+    "test": "lerna run test",
+    "update:dependency": "node ./node_modules/@jupyterlab/buildutils/lib/update-dependency.js --lerna",
+    "upgrade:lab:dependencies": "node ./buildutils/lib/upgrade-lab-dependencies.js",
+    "watch": "run-p watch:lib watch:app",
+    "watch:app": "lerna exec --stream --scope \"@jupyter-notebook/app\" jlpm watch",
+    "watch:lib": "lerna exec --stream --scope @jupyter-notebook/metapackage jlpm watch"
   },
-  "dependencies": {
-    "@jupyter-notebook/application": "^7.5.0-alpha.0",
-    "@jupyterlab/application": "~4.5.0-alpha.1",
-    "@jupyterlab/apputils": "~4.6.0-alpha.1",
-    "@jupyterlab/coreutils": "~6.5.0-alpha.1",
-    "@jupyterlab/docregistry": "~4.5.0-alpha.1",
-    "@jupyterlab/notebook": "~4.5.0-alpha.1",
-    "@jupyterlab/translation": "~4.5.0-alpha.1",
-    "@jupyterlab/ui-components": "~4.5.0-alpha.1",
-    "@lumino/commands": "^2.3.2",
-    "@lumino/disposable": "^2.1.4"
+  "resolutions": {
+    "@types/react": "^18.0.26",
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "@jupyterlab/builder": "~4.5.0-alpha.1",
+    "@jupyterlab/apputils": "^4.5.5",
+    "@jupyterlab/buildutils": "~4.5.0-alpha.1",
+    "@jupyterlab/coreutils": "^6.4.5",
+    "@jupyterlab/mainmenu": "^4.4.5",
+    "@jupyterlab/ui-components": "^4.4.5",
+    "@lumino/disposable": "^2.1.4",
+    "@lumino/widgets": "^2.7.1",
+    "@types/json-schema": "^7.0.15",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "html-webpack-plugin": "^5.6.3",
+    "lerna": "^7.1.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.5",
+    "react": "^19.1.0",
     "rimraf": "^3.0.2",
-    "typescript": "4.9.5"
+    "typescript": "^5.8.3"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "jupyterlab": {
-    "extension": true,
-    "outputDir": "../../notebook/labextension",
-    "schemaDir": "schema",
-    "_build": {
-      "load": "static/remoteEntry.00d0fc5477562c5807eb.js",
-      "extension": "./extension",
-      "style": "./style"
-    }
-  },
-  "nx": {
-    "targets": {
-      "build:labextension:dev": {
-        "dependsOn": [
-          "^build:lib",
-          "build:lib"
-        ],
-        "outputs": [
-          "{workspaceRoot}/notebook/labextension",
-          "{workspaceRoot}/notebook/labextension/build_log.json"
-        ]
-      },
-      "build:labextension": {
-        "dependsOn": [
-          "^build:lib",
-          "build:lib"
-        ],
-        "outputs": [
-          "{workspaceRoot}/notebook/labextension"
-        ]
-      },
-      "build": {
-        "dependsOn": [
-          "build:labextension:dev"
-        ]
-      },
-      "build:prod": {
-        "dependsOn": [
-          "build:labextension"
-        ]
-      }
-    }
-  },
-  "styleModule": "style/index.js"
+  "nx": {}
 }
