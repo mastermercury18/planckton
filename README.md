@@ -113,6 +113,7 @@ source .venv/bin/activate  # On macOS/Linux
 
 ```bash
 pip install -r requirements.txt
+python -m pip install -e .
 ```
 
 ### 4. Set Up OpenAI API Key
