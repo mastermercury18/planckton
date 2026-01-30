@@ -112,10 +112,10 @@ source .venv/bin/activate  # On macOS/Linux
 ### 3. Install Python Dependencies
 
 ```bash
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 python3 -m pip install -r requirements_rag.txt
-python -m pip install -e .
+python3 -m pip install -e .
 ```
 
 ### 4. Set Up OpenAI API Key
