@@ -113,7 +113,8 @@ source .venv/bin/activate  # On macOS/Linux
 
 ```bash
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements_rag.txt
 python -m pip install -e .
 ```
 
