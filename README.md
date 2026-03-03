@@ -1,4 +1,4 @@
-# planckton: cursor for quantum devs
+# Planckton: Jupyter-Native Quantum Computing Co-Pilot
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](LICENSE)
