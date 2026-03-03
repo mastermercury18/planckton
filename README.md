@@ -1,4 +1,4 @@
-# 🚀 Planckton: Quantum AI Assistant for Jupyter Notebook
+# planckton: cursor for quantum devs
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](LICENSE)
