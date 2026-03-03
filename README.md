@@ -24,13 +24,6 @@
 - **Comprehensive Coverage**: Includes VQE, Grover's algorithm, QAOA, quantum primitives, and more
 - **2025 API Support**: Always uses the latest Qiskit APIs and syntax
 
-### 🎨 User Experience
-- **Side Panel Interface**: Access Planckton through a dedicated side panel that doesn't interfere with your workflow
-- **Code Block Support**: AI responses include formatted code blocks with syntax highlighting
-- **Copy-to-Clipboard**: One-click copying of generated quantum circuits and algorithms
-- **Conversation History**: Maintains context across multiple interactions
-- **Auto-Resizing Input**: Smart textarea that adapts to your message length
-
 ## 🏗️ Architecture
 
 Planckton is built on top of Jupyter Notebook v7 and consists of:
@@ -181,44 +174,21 @@ The script will:
 
 1. Open your browser to `http://localhost:8890`
 2. Create or open a notebook
-3. Click the **🤖 Planckton** button in the notebook toolbar
+3. Click the plankton button in the notebook toolbar
 4. Start chatting with your quantum AI assistant!
 
 ## 📖 Usage Guide
 
-### Basic Usage
+### Example Prompts
 
-1. **Open Planckton**: Click the Planckton icon (🤖) in the notebook toolbar
-2. **Ask Questions**: Type your question about quantum computing, Qiskit, algorithms, etc.
-3. **Get Responses**: Receive AI-generated responses with code examples and explanations
-4. **Copy Code**: Click the copy button on any code block to copy it to your clipboard
-5. **Continue Conversation**: Build on previous responses for more detailed assistance
-
-### Example Questions
-
-- "How do I create a quantum circuit with Qiskit?"
+- "Using the latest version/documentation of Qiskit, construct a Bell State circuit and simulate using the Aer simulator. Visualize the results in a histogram."
+- "Using the latest version/documentation of Qiskit, simulate quantum phase estimation with four qubits (3 for QPE, 1 for the eigenstate) using the Aer simulator. Visualize the results in a histogram."
 - "Explain the Variational Quantum Eigensolver (VQE) algorithm"
-- "Show me how to use Grover's algorithm for search"
 - "What's the difference between `AerSimulator` and `qasm_simulator`?"
 - "How do I transpile a circuit for a specific backend?"
 
-### RAG System Features
-
-The RAG system automatically:
-- **Searches** the latest Qiskit documentation for relevant information
-- **Retrieves** the most relevant documentation snippets
-- **Enhances** AI responses with up-to-date API information
-- **Provides** accurate code examples using current Qiskit syntax
 
 ## ⚙️ Configuration
-
-### Customizing the Port
-
-Edit `run_planckton.sh` and change the `PORT` variable:
-
-```bash
-PORT=8890  # Change to your preferred port
-```
 
 ### Using a Different OpenAI Model
 
@@ -232,28 +202,6 @@ response = openai.chat.completions.create(
 )
 ```
 
-### RAG System Configuration
-
-The RAG system can be configured in `qiskit_rag_system.py`:
-
-- **Documentation File**: Change `docs_file` parameter in `QiskitRAGSystem.__init__()`
-- **Search Parameters**: Adjust `top_k` in `get_context_for_query()` for more/fewer results
-- **Vectorization**: Modify `TfidfVectorizer` parameters for different search behavior
-
-## 🛠️ Development
-
-### Building from Source
-
-```bash
-# Install dependencies
-jlpm install
-
-# Build in development mode (with hot reloading)
-jlpm develop
-
-# Build for production
-jlpm build:prod
-```
 
 ### Project Structure
 
@@ -281,66 +229,6 @@ jupyter-planckton/
 - **Backend**: `notebook/app.py` - Python handler for AI API integration
 - **RAG System**: `qiskit_rag_system.py` - Documentation retrieval and search
 - **Scraper**: `qiskit_docs_scraper_linklist.py` - Qiskit documentation scraper
-
-### Running Tests
-
-```bash
-# Run Python tests
-pytest tests/
-
-# Run JavaScript tests
-jlpm test
-```
-
-## 🐛 Troubleshooting
-
-### RAG System Not Initializing
-
-**Problem**: `[Planckton] RAG system not available, falling back to basic mode`
-
-**Solution**:
-1. Ensure `comprehensive_qiskit_docs.json` exists in the project root
-2. Run the setup script: `python setup_qiskit_rag_linklist.py`
-3. Check that all dependencies are installed: `pip install -r requirements.txt`
-
-### OpenAI API Errors
-
-**Problem**: API errors or "Invalid API key" messages
-
-**Solution**:
-1. Verify your API key is set: `echo $OPENAI_API_KEY`
-2. Check your API key is valid at [OpenAI Platform](https://platform.openai.com/)
-3. Ensure you have API credits available
-
-### Extension Not Appearing
-
-**Problem**: Planckton button doesn't appear in the toolbar
-
-**Solution**:
-1. Rebuild the extension: `jlpm build:prod`
-2. Restart the Jupyter server
-3. Clear browser cache and hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
-4. Check browser console for errors (F12)
-
-### Port Already in Use
-
-**Problem**: `Address already in use` error
-
-**Solution**:
-1. Change the port in `run_planckton.sh`: `PORT=8891`
-2. Or kill the process using the port:
-   ```bash
-   lsof -ti:8890 | xargs kill -9
-   ```
-
-### Documentation Not Loading
-
-**Problem**: RAG system can't find documentation
-
-**Solution**:
-1. Run the scraper: `python setup_qiskit_rag_linklist.py`
-2. Check that `comprehensive_qiskit_docs.json` exists and is not empty
-3. Verify file permissions: `ls -la comprehensive_qiskit_docs.json`
 
 ## 📚 Additional Resources
 
