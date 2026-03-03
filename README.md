@@ -72,7 +72,7 @@ Before you begin, ensure you have:
 - **OpenAI API Key** ([Get one here](https://platform.openai.com/))
 - **Git** (for cloning the repository)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 
@@ -180,7 +180,7 @@ The script will:
 - "How do I transpile a circuit for a specific backend?"
 
 
-## ⚙️ Configuration
+## Configuration
 
 ### Using a Different OpenAI Model
 
@@ -222,14 +222,7 @@ jupyter-planckton/
 - **RAG System**: `qiskit_rag_system.py` - Documentation retrieval and search
 - **Scraper**: `qiskit_docs_scraper_linklist.py` - Qiskit documentation scraper
 
-## 📚 Additional Resources
-
-- [Jupyter Notebook Documentation](https://jupyter-notebook.readthedocs.io/)
-- [Qiskit Documentation](https://qiskit.org/documentation/)
-- [OpenAI API Documentation](https://platform.openai.com/docs/)
-- [JupyterLab Extension Development](https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html)
-
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -243,11 +236,11 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 6. Push to the branch: `git push origin feature/amazing-feature`
 7. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the BSD-3-Clause License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built on top of [Jupyter Notebook](https://github.com/jupyter/notebook)
 - Powered by [OpenAI](https://openai.com/) GPT models
