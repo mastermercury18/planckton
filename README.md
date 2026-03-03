@@ -8,30 +8,22 @@
 
 ![Planckton SS](planckton-ss.png)
 
-## ✨ Features
+## Features
 
-### 🤖 Intelligent Quantum Assistant
+### Intelligent Quantum Assistant
 - **Context-Aware Responses**: Powered by OpenAI's GPT-4 Turbo with conversation history
 - **Quantum Algorithm Guidance**: Get help with quantum algorithms, circuit design, and quantum gates
 - **Quantum Code Generation**: Generate quantum circuits, quantum programs, and quantum algorithms
 - **Multi-Framework Support**: Specialized assistance for Qiskit, Cirq, PennyLane, and other quantum frameworks
 - **Real-Time Assistance**: Instant AI responses without leaving your notebook workflow
 
-### 📚 RAG-Powered Documentation System
+### RAG-Powered Documentation System
 - **Up-to-Date Qiskit Documentation**: Automatically scrapes and indexes the latest Qiskit documentation
 - **Semantic Search**: Uses TF-IDF vectorization and cosine similarity to find relevant documentation
 - **Enhanced Context**: Retrieves and includes relevant documentation snippets in AI responses
 - **Comprehensive Coverage**: Includes VQE, Grover's algorithm, QAOA, quantum primitives, and more
 - **2025 API Support**: Always uses the latest Qiskit APIs and syntax
 
-## 🏗️ Architecture
-
-Planckton is built on top of Jupyter Notebook v7 and consists of:
-
-- **Frontend**: React-based side panel extension (`packages/notebook-extension/src/planckton.tsx`)
-- **Backend**: Python API handler integrated into Jupyter Server (`notebook/app.py`)
-- **RAG System**: Python-based documentation retrieval system (`qiskit_rag_system.py`)
-- **Documentation Scraper**: Automated Qiskit documentation scraper (`qiskit_docs_scraper_linklist.py`)
 
 ```
 ┌─────────────────────────────────────────────────────────┐
